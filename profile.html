@@ -5,89 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>John Doe - Large</title>
     <link rel="stylesheet" href="style/main.css">
-    <style>
-        .user-menu {
-            position: relative;
-            display: inline-block;
-        }
+    <link rel="stylesheet" href="style/profile.css">
 
-        .user-avatar {
-            width: 32px;
-            height: 32px;
-            border-radius: 50%;
-            cursor: pointer;
-        }
-
-        .dropdown-menu {
-            position: absolute;
-            top: 100%;
-            right: 0;
-            background: white;
-            border: 1px solid #e6e6e6;
-            border-radius: 4px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-            min-width: 200px;
-            display: none;
-            z-index: 1000;
-        }
-
-        .dropdown-menu.show {
-            display: block;
-        }
-
-        .dropdown-item {
-            display: block;
-            padding: 12px 16px;
-            color: #292929;
-            text-decoration: none;
-            font-size: 14px;
-        }
-
-        .dropdown-item:hover {
-            background: #f8f8f8;
-        }
-
-        .dropdown-divider {
-            height: 1px;
-            background: #e6e6e6;
-            margin: 8px 0;
-        }
-
-        .write-btn {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            padding: 8px 16px;
-            border-radius: 20px;
-            background: #1a8917;
-            color: white;
-            text-decoration: none;
-            font-size: 14px;
-            margin-right: 16px;
-        }
-
-        .write-btn svg {
-            width: 16px;
-            height: 16px;
-        }
-
-        .btn {
-            padding: 8px 16px;
-            border-radius: 20px;
-            text-decoration: none;
-            font-weight: 500;
-            transition: all 0.2s ease;
-        }
-        
-        .btn-write {
-            background-color: #1a8917;
-            color: white;
-        }
-        
-        .btn-write:hover {
-            background-color: #156912;
-        }
-    </style>
 </head>
 <body>
     <!-- Navbar -->
@@ -163,23 +82,8 @@
         </article>
     </main>
 
-    <script>
-        // Kullanıcı menüsü için dropdown işlevselliği
-        const userMenuBtn = document.getElementById('userMenuBtn');
-        const userDropdown = document.getElementById('userDropdown');
+    <script src="script/profile.js">
 
-        userMenuBtn.addEventListener('click', () => {
-            userDropdown.classList.toggle('show');
-        });
-
-        // Sayfa herhangi bir yerine tıklandığında menüyü kapat
-        window.addEventListener('click', (e) => {
-            if (!e.target.matches('.user-avatar')) {
-                if (userDropdown.classList.contains('show')) {
-                    userDropdown.classList.remove('show');
-                }
-            }
-        });
     </script>
 </body>
 </html> 
